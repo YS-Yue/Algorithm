@@ -20,7 +20,8 @@ class SolutionLC526:
                 self.count += 1
             else:
                 for i in range(1, n+1):
-                    if not visited[i] and (position % i == 0 or i % position == 0):
+                    if not visited[i] and (position % i == 0 or
+                                           i % position == 0):
                         visited[i] = 1
                         backtracking(n, position+1, visited)
                         visited[i] = 0

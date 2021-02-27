@@ -38,3 +38,21 @@ class Solution:
                 
         helper([], nums)
         return res 
+
+
+    def permute3(self, nums):
+        if len(nums) == 1:
+            return [nums]
+        
+        ans = []
+        
+        for i in range(len(nums)):
+            rest = nums[:i] + nums[i+1:]
+            
+            rest_permutation = self.permute(rest)
+            
+            for p in rest_permutation:
+                ans.append([nums[i]] + p)
+                
+        return ans
+       

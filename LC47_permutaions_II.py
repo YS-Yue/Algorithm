@@ -2,7 +2,7 @@
 # # 时间/空间 复杂度 均为：O(N × N!)
 
 class Solution:
-    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+    def permuteUnique(self, nums):
         ans = []
         nums.sort()
         self.dfs(nums, [], ans)

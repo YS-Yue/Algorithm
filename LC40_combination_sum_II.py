@@ -2,7 +2,7 @@
 # Space Complexity: O(N) #最多会call N层stack
 
 class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates):
         ans = []
         candidates.sort()
         self.dfs(candidates, 0, target, [], ans)
